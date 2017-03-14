@@ -5,6 +5,6 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
-  <App />,
+  <App traits={['Compassionate', 'Grateful', 'Gritty']} />,
   document.getElementById('root')
 );

@@ -4,19 +4,31 @@ import './App.css';
 
 import { Button } from 'reactstrap';
 
-function handleClickCompassionate(){
-  console.log('button clicked');
-}
 
-function handleClickGrateful(){
-  console.log('button clicked');
-}
-
-function handleClickGritty(){
-  console.log('button clicked');
-}
 
 class App extends Component {
+
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      quotes: 'this one'
+    }
+
+  }
+
+handleClickCompassionate(){
+  console.log('button clicked');
+}
+
+handleClickGrateful(){
+  console.log('button clicked');
+}
+
+handleClickGritty(){
+  console.log('button clicked');
+}
+
   render() {
     return (
       <div className="App">
@@ -25,13 +37,13 @@ class App extends Component {
           <h2>What do you want to be?</h2>
         </div>
 
-        <Button onClick={handleClickCompassionate}>Compassionate
+        <Button onClick={this.handleClickCompassionate}>Compassionate
         </Button>
 
-        <Button onClick={handleClickGrateful}>Grateful
+        <Button onClick={this.handleClickGrateful}>Grateful
         </Button>
 
-        <Button onClick={handleClickGritty}>Gritty
+        <Button onClick={this.handleClickGritty}>Gritty
         </Button>
 
       </div>

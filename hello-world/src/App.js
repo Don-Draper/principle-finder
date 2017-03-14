@@ -25,9 +25,9 @@ class App extends Component {
 
 handleClickComp(){
   console.log('comp button clicked');
-    fetch('../server.js')
+    fetch('http://localhost:4568/')
     .then(function(response){
-      console.log(response);
+      console.log('got back a response from fetch');
     });
   // this.setState({
   //   thisQuote: this.state.quotes.compassionate[Math.floor(Math.random()* this.state.quotes.compassionate.length)]

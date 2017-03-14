@@ -25,9 +25,13 @@ class App extends Component {
 
 handleClickComp(){
   console.log('comp button clicked');
-  this.setState({
-    thisQuote: this.state.quotes.compassionate[Math.floor(Math.random()* this.state.quotes.compassionate.length)]
-  });
+    fetch('../server.js')
+    .then(function(response){
+      console.log(response);
+    });
+  // this.setState({
+  //   thisQuote: this.state.quotes.compassionate[Math.floor(Math.random()* this.state.quotes.compassionate.length)]
+  // });
 };
 
 handleClickGrate(){
@@ -77,11 +81,11 @@ handleClickGrit(){
 
 var PrincipleList = ({principle}) => (
   <div>
-    <ul>
 
-    {principle}
 
-    </ul>
+    <h3>{principle}</h3>
+
+
   </div>
 );
 

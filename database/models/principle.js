@@ -3,10 +3,10 @@ var mongoose = require('mongoose');
 
 var principleSchema = mongoose.Schema({
   text: String,
-  author: String
+  category: String
 });
 
-var Principle = mongoose.model('Principle', principleSchema);
+var Principle = mongoose.model('principledb', principleSchema);
 
 // principleSchema.pre('save', function(next) {
 //   var code = createSha(this.url);
